@@ -33,6 +33,7 @@ $ npm install redux
 
 -   **Reducer**는 data를 수정하는 함수이다.
 -   Redux는 reducer 함수에서 return 하는 값으로 데이터를 변경한다.
+-   Reducer가 리턴하는 것은 무엇이든지 application의 state가 된다.
 
 ```javascript
 import { createStore } from "redux";
@@ -72,6 +73,7 @@ countStore.dispatch({ type: "HELLO" });
 <br>
 
 -   위 예제처럼 countStore.dispatch({type: "HELLO"}) 를 하게되면 Redux는 countModifier(currentState = 0, {type: "HELLO"})와 같이 호출한다.
+-   reducer에 dispatch를 사용해서 action을 보낼 수 있다. dispatch가 reducer를 불러서 current state와 action로 state를 변경할 수 있다.
 
 -   https://github.com/yoojh9/redux/commit/4fc65dabd19c4342de130c7e01a134b347066510
 
@@ -94,3 +96,5 @@ countStore.subscribe(onChange);
 <br>
 
 -   state에 변화가 있으면 subscribe가 onChange()를 실행함.
+-   change를 store에서 감지하고 싶다면 그 change를 subscribe(구독)하면 된다.
+-   https://github.com/yoojh9/redux/commit/9aa4694e36c018f63c9dfd8b4f0cf249269d1918
