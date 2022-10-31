@@ -72,3 +72,25 @@ countStore.dispatch({ type: "HELLO" });
 <br>
 
 -   위 예제처럼 countStore.dispatch({type: "HELLO"}) 를 하게되면 Redux는 countModifier(currentState = 0, {type: "HELLO"})와 같이 호출한다.
+
+-   https://github.com/yoojh9/redux/commit/4fc65dabd19c4342de130c7e01a134b347066510
+
+<br>
+
+### (4) Subscribe
+
+-   subscribe는 우리에게 store 안에 있는 변화들을 알 수 있게 해준다.
+
+<br>
+
+```javascript
+const onChange = () => {
+    number.innerText = countStore.getState();
+};
+
+countStore.subscribe(onChange);
+```
+
+<br>
+
+-   state에 변화가 있으면 subscribe가 onChange()를 실행함.
