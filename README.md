@@ -10,4 +10,4 @@ $ npx create-react-app vanilla-redux
 
 ### [1. vanilla-redux](https://github.com/yoojh9/redux/tree/main/vanilla-redux)
 
-### [2. vanilla-todo] (https://github.com/yoojh9/redux/tree/main/vanilla-todo)
+### [2. vanilla-todo](https://github.com/yoojh9/redux/tree/main/vanilla-todo)
