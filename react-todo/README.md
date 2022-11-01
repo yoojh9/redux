@@ -122,7 +122,8 @@ function Home(props) {
 }
 
 // redux에서는 store.getState();
-function mapStateToProps(state) {
+// ownProps는 현재 컴포넌트가 받아온 props이다.
+function mapStateToProps(state, ownProps) {
     return { check: true };
 }
 
@@ -175,3 +176,5 @@ export default connect(null, mapDispatchToProps)(ToDo);
 -   https://github.com/yoojh9/redux/commit/a6dff3e9da8da896773377a0e490da82ccbaffb4
 
 <br><br>
+
+## 5) Detail Screen
