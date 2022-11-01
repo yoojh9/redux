@@ -1,10 +1,14 @@
 # React-todo
 
+### 1) Set up
+
+<br>
+
 ```
 $ npm install react-redux react-router-dom
 ```
 
-<br><br>
+<br>
 
 -   react-router-dom v6.4.2 버전이라 기존 라우터와 코드가 달라짐
 
@@ -43,3 +47,7 @@ const root = createRoot(container);
 
 root.render(<App />);
 ```
+
+<br><br>
+
+### 2)
