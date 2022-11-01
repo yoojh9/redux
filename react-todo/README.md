@@ -91,7 +91,7 @@ root.render(
 
 <br>
 
-### (2) mapStateToProps\*\*
+### (2) mapStateToProps
 
 -   연결된 컴포넌트에서 필요로 하는 데이터를 store로 부터 가져오기 위해 사용.
 -   store에서 state가 변경될 떄마다 호출된다
@@ -132,3 +132,10 @@ export default connect(mapStateToProps)(Home);
 <br>
 
 -   https://github.com/yoojh9/redux/commit/9bd18d36e048d04ac953a99430ec17e93d59d7d5
+
+<br>
+
+### (3) mapDispatchToProps
+
+-   컴포넌트가 store에 dispatch 동작을 하는 방법 (store.dispatch()와 같음)
+-   connect() 함수의 두번째 argument이다.
