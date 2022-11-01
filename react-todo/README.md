@@ -178,3 +178,5 @@ export default connect(null, mapDispatchToProps)(ToDo);
 <br><br>
 
 ## 5) Detail Screen
+
+-   https://github.com/yoojh9/redux/commit/f4f49fe420047431564df890f69265e682e7859d
