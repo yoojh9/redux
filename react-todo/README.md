@@ -1,6 +1,6 @@
 # React-todo
 
-### 1) Set up
+## 1) Set up
 
 <br>
 
@@ -50,7 +50,7 @@ root.render(<App />);
 
 <br><br>
 
-### 2) Connecting the Store
+## 2) Connecting the Store
 
 -   store의 변경사항에 대해 subscribe 하기 위해 react-redux가 필요.
 
@@ -83,48 +83,52 @@ root.render(
 
 <br><br>
 
-### 3) react-redux
+## 3) react-redux
 
--   **connect()** : component 들을 store에 연결시켜준다.
+### (1)connect()
+
+-   component들을 store에 연결시켜준다.
 
 <br>
 
--   **mapStateToProps**
+### (2) mapStateToProps\*\*
 
-    -   연결된 컴포넌트에서 필요로 하는 데이터를 store로 부터 가져오기 위해 사용.
-    -   store에서 state가 변경될 떄마다 호출된다
+-   연결된 컴포넌트에서 필요로 하는 데이터를 store로 부터 가져오기 위해 사용.
+-   store에서 state가 변경될 떄마다 호출된다
 
-    -   connect() 함수의 첫번째 argument로 넘겨지며, Redux Store state가 변경될 때마다 호출된다.
+-   connect() 함수의 첫번째 argument로 넘겨지며, Redux Store state가 변경될 때마다 호출된다.
 
-    <br>
+<br>
 
-    ```javascript
-        function mapStateToProps(state, ownProps?)
-    ```
+```javascript
+    function mapStateToProps(state, ownProps?)
+```
 
-    <br>
+<br>
 
-    -   mapStateToProps 함수의 첫번째 argument는 Redux store state 전체이다. (Store.getState()와 같은 값)
+-   mapStateToProps 함수의 첫번째 argument는 Redux store state 전체이다. (Store.getState()와 같은 값)
 
-    -   mapStateToProps는 state를 가져와서 컴포넌트의 props에 전달한다.
+-   mapStateToProps는 state를 가져와서 컴포넌트의 props에 전달한다.
 
-    <br>
+<br>
 
-    ```javascript
-    // Home.js
+```javascript
+// Home.js
 
-    function Home(props) {
-        console.log(props); // {check: true, dispatch: ƒ}
+function Home(props) {
+    console.log(props); // {check: true, dispatch: ƒ}
 
-        return <></>;
-    }
+    return <></>;
+}
 
-    // redux에서는 store.getState();
-    function mapStateToProps(state) {
-        return { check: true };
-    }
+// redux에서는 store.getState();
+function mapStateToProps(state) {
+    return { check: true };
+}
 
-    export default connect(mapStateToProps)(Home);
-    ```
+export default connect(mapStateToProps)(Home);
+```
 
-    <br>
+<br>
+
+-   https://github.com/yoojh9/redux/commit/9bd18d36e048d04ac953a99430ec17e93d59d7d5
