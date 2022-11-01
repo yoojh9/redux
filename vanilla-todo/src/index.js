@@ -61,7 +61,6 @@ const onSubmit = e => {
   e.preventDefault();
   const toDo = input.value;
   input.value = "";
-  //createToDo(toDo);
   dispatchAddToDo(toDo);
 }
 

@@ -30,3 +30,4 @@ friends.push("yong");
 ### 4) Delete To Do
 
 -   splice()는 Array 자체 값을 변경하므로 splice 대신 새로운 Array를 리턴하는 filter()를 사용한다.
+-   https://github.com/yoojh9/redux/commit/baad571219b05f0a984fb929089dc53ebbe998eb
