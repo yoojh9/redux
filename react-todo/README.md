@@ -139,3 +139,8 @@ export default connect(mapStateToProps)(Home);
 
 -   컴포넌트가 store에 dispatch 동작을 하는 방법 (store.dispatch()와 같음)
 -   connect() 함수의 두번째 argument이다.
+-   https://github.com/yoojh9/redux/commit/af215ec10e561af4e1d12ddd82fb64961c82f7a7
+
+<br><br>
+
+## 4) Deleting to Todo
