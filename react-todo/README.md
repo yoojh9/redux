@@ -50,4 +50,29 @@ root.render(<App />);
 
 <br><br>
 
-### 2)
+### 2) Connecting the Store
+
+-   store의 변경사항에 대해 subscribe 하기 위해 react-redux가 필요.
+
+-   index.js에 <Provider/> 와 store를 추가한다.
+
+<br>
+
+```javascript
+// index.js
+
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { Provider } from "react-redux";
+import store from "../store";
+import App from "./components/App";
+
+const container = document.getElementById("root");
+const root = createRoot(container);
+
+root.render(
+    <Provider store={store}>
+        <App />
+    </Provider>
+);
+```
