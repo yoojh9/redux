@@ -11,7 +11,7 @@ const DELETE_TODO = "DELETE_TODO";
 const reducer = (state = [], action) => {
   console.log(action)
   switch (action.type) {
-    case ADD_TODO: return [...state, action.text]; 
+    case ADD_TODO: return [...state, {text: action.text, id: Date.now()}]; 
     case DELETE_TODO: return []
     default:
       return state;
@@ -30,7 +30,7 @@ const onSubmit = e => {
   const toDo = input.value;
   input.value = "";
   //createToDo(toDo);
-  store.dispatch({type: ADD_TODO, text: toDo});
+  store.dispatch({type: ADD_TODO, text: toDo, id: Date.now()});
 }
 
 form.addEventListener('submit', onSubmit);
