@@ -7,8 +7,9 @@ function ToDo({text, deleteTodo, id}) {
     return (
         <li>
             <Link to={`/${id}`}>
-                {text} <button onClick={deleteTodo}>DEL</button>
+                {text}
             </Link>
+            <button onClick={deleteTodo}>DEL</button>
         </li>
     )
 }
