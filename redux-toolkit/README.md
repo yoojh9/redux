@@ -54,3 +54,28 @@ const reducer = createReducer([], {
 <br><br>
 
 ## 4) createSlice
+
+-   결론적으로 코드가 아래와 같이 바뀜.
+
+<br>
+
+```javascript
+// store.js
+const toDos = createSlice({
+    name: "toDosReducer",
+    initialState: [],
+    reducers: {
+        add: (state, action) => {
+            state.push({ text: action.payload, id: Date.now() });
+        },
+        remove: (state, action) =>
+            state.filter((todo) => todo.id !== action.payload),
+    },
+});
+
+const store = configureStore({ reducer: toDos.reducer });
+
+export const { add, remove } = toDos.actions;
+
+export default store;
+```
