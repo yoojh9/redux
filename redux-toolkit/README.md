@@ -42,3 +42,15 @@ const reducer = createReducer([], {
 <br>
 
 -   https://redux-toolkit.js.org/api/createReducer
+-   https://github.com/yoojh9/redux/commit/a90c6ece22fda273eb6f5b14ae77ecc6f53dda18
+
+<br><br>
+
+## 3) configureStore
+
+-   https://redux-toolkit.js.org/api/configureStore
+-   chrome extension의 Redux Developer Tool을 설치하면 action 정보와 state를 확인할 수 있다.
+
+<br><br>
+
+## 4) createSlice
