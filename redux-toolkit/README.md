@@ -55,7 +55,9 @@ const reducer = createReducer([], {
 
 ## 4) createSlice
 
--   결론적으로 코드가 아래와 같이 바뀜.
+-   모든 것을 캡슐화 하여, 결론적으로 코드가 아래와 같이 바뀜.
+-   https://redux-toolkit.js.org/api/createSlice
+-   https://github.com/yoojh9/redux/commit/b1c2b95e38a7b09c0558b8a0407e79be07f6cb20
 
 <br>
 
