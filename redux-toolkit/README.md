@@ -12,3 +12,33 @@ $ npm install @reduxjs/toolkit
 <br><br>
 
 ## 1) createAction
+
+-   https://redux-toolkit.js.org/api/createAction
+-   https://github.com/yoojh9/redux/commit/c092a91c45d45ff3e87d61818650d2c854763c29
+
+<br><br>
+
+## 2) createReducer
+
+-   createReducer를 사용하면 state를 mutate 하기 쉽다.
+-   기존에 작업 했던 건 새로운 state를 만들어서 리턴했지, state를 mutate 하지 않았다.
+-   createReducer를 사용할 때는 2가지 선택지가 있다. 새로운 state를 리턴하거나 state를 mutate 할 수 있다.
+-   즉 createReducer는 switch case를 하지 않아도 되게 만들어주고, state를 mutate 할 수 있게 해준다.
+
+-   아래 예제에서 push는 state를 mutate하고, filter는 새로운 state를 리턴한다.
+
+<br>
+
+```javascript
+const reducer = createReducer([], {
+    [addToDo]: (state, action) => {
+        state.push({ text: action.payload, id: Date.now() });
+    },
+    [deleteToDo]: (state, action) =>
+        state.filter((todo) => todo.id !== action.payload),
+});
+```
+
+<br>
+
+-   https://redux-toolkit.js.org/api/createReducer
